@@ -1,0 +1,651 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EAA694001D18E9A6009D1B35 /* VXXCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA693F91D18E9A6009D1B35 /* VXXCollectionView.m */; };
+		EAA694011D18E9A6009D1B35 /* VXXCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA693FB1D18E9A6009D1B35 /* VXXCollectionViewCell.m */; };
+		EAA694021D18E9A6009D1B35 /* VXXCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA693FD1D18E9A6009D1B35 /* VXXCollectionViewLayout.m */; };
+		EAA694031D18E9A6009D1B35 /* VXXcycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA693FF1D18E9A6009D1B35 /* VXXcycleScrollView.m */; };
+		EAFE80971CF29E1F0046CC7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80961CF29E1F0046CC7E /* main.m */; };
+		EAFE809A1CF29E1F0046CC7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80991CF29E1F0046CC7E /* AppDelegate.m */; };
+		EAFE809D1CF29E1F0046CC7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE809C1CF29E1F0046CC7E /* ViewController.m */; };
+		EAFE80A01CF29E1F0046CC7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFE809E1CF29E1F0046CC7E /* Main.storyboard */; };
+		EAFE80A21CF29E1F0046CC7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFE80A11CF29E1F0046CC7E /* Assets.xcassets */; };
+		EAFE80A51CF29E1F0046CC7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFE80A31CF29E1F0046CC7E /* LaunchScreen.storyboard */; };
+		EAFE80B01CF29E200046CC7E /* _______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80AF1CF29E200046CC7E /* _______Tests.m */; };
+		EAFE80BB1CF29E200046CC7E /* _______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80BA1CF29E200046CC7E /* _______UITests.m */; };
+		EAFE80E21CF2A0150046CC7E /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80CC1CF2A0150046CC7E /* MASCompositeConstraint.m */; };
+		EAFE80E31CF2A0150046CC7E /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80CF1CF2A0150046CC7E /* MASConstraint.m */; };
+		EAFE80E41CF2A0150046CC7E /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80D11CF2A0150046CC7E /* MASConstraintMaker.m */; };
+		EAFE80E51CF2A0150046CC7E /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80D31CF2A0150046CC7E /* MASLayoutConstraint.m */; };
+		EAFE80E61CF2A0150046CC7E /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80D71CF2A0150046CC7E /* MASViewAttribute.m */; };
+		EAFE80E71CF2A0150046CC7E /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80D91CF2A0150046CC7E /* MASViewConstraint.m */; };
+		EAFE80E81CF2A0150046CC7E /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80DB1CF2A0150046CC7E /* NSArray+MASAdditions.m */; };
+		EAFE80E91CF2A0150046CC7E /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80DE1CF2A0150046CC7E /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		EAFE80EA1CF2A0150046CC7E /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80E01CF2A0150046CC7E /* View+MASAdditions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EAFE80AC1CF29E1F0046CC7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAFE808A1CF29E1F0046CC7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAFE80911CF29E1F0046CC7E;
+			remoteInfo = "图片轮播器案例";
+		};
+		EAFE80B71CF29E200046CC7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAFE808A1CF29E1F0046CC7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAFE80911CF29E1F0046CC7E;
+			remoteInfo = "图片轮播器案例";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EAA693F81D18E9A6009D1B35 /* VXXCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXXCollectionView.h; sourceTree = "<group>"; };
+		EAA693F91D18E9A6009D1B35 /* VXXCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXXCollectionView.m; sourceTree = "<group>"; };
+		EAA693FA1D18E9A6009D1B35 /* VXXCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXXCollectionViewCell.h; sourceTree = "<group>"; };
+		EAA693FB1D18E9A6009D1B35 /* VXXCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXXCollectionViewCell.m; sourceTree = "<group>"; };
+		EAA693FC1D18E9A6009D1B35 /* VXXCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXXCollectionViewLayout.h; sourceTree = "<group>"; };
+		EAA693FD1D18E9A6009D1B35 /* VXXCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXXCollectionViewLayout.m; sourceTree = "<group>"; };
+		EAA693FE1D18E9A6009D1B35 /* VXXcycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXXcycleScrollView.h; sourceTree = "<group>"; };
+		EAA693FF1D18E9A6009D1B35 /* VXXcycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXXcycleScrollView.m; sourceTree = "<group>"; };
+		EAFE80921CF29E1F0046CC7E /* 图片轮播器案例.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "图片轮播器案例.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFE80961CF29E1F0046CC7E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EAFE80981CF29E1F0046CC7E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EAFE80991CF29E1F0046CC7E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EAFE809B1CF29E1F0046CC7E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EAFE809C1CF29E1F0046CC7E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EAFE809F1CF29E1F0046CC7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EAFE80A11CF29E1F0046CC7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAFE80A41CF29E1F0046CC7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EAFE80A61CF29E1F0046CC7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAFE80AB1CF29E1F0046CC7E /* 图片轮播器案例Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "图片轮播器案例Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFE80AF1CF29E200046CC7E /* _______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______Tests.m"; sourceTree = "<group>"; };
+		EAFE80B11CF29E200046CC7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAFE80B61CF29E200046CC7E /* 图片轮播器案例UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "图片轮播器案例UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFE80BA1CF29E200046CC7E /* _______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______UITests.m"; sourceTree = "<group>"; };
+		EAFE80BC1CF29E200046CC7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAFE80CB1CF2A0150046CC7E /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		EAFE80CC1CF2A0150046CC7E /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		EAFE80CD1CF2A0150046CC7E /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		EAFE80CE1CF2A0150046CC7E /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		EAFE80CF1CF2A0150046CC7E /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		EAFE80D01CF2A0150046CC7E /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		EAFE80D11CF2A0150046CC7E /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		EAFE80D21CF2A0150046CC7E /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		EAFE80D31CF2A0150046CC7E /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		EAFE80D41CF2A0150046CC7E /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		EAFE80D51CF2A0150046CC7E /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		EAFE80D61CF2A0150046CC7E /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		EAFE80D71CF2A0150046CC7E /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		EAFE80D81CF2A0150046CC7E /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		EAFE80D91CF2A0150046CC7E /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		EAFE80DA1CF2A0150046CC7E /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		EAFE80DB1CF2A0150046CC7E /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		EAFE80DC1CF2A0150046CC7E /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		EAFE80DD1CF2A0150046CC7E /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		EAFE80DE1CF2A0150046CC7E /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		EAFE80DF1CF2A0150046CC7E /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		EAFE80E01CF2A0150046CC7E /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		EAFE80E11CF2A0150046CC7E /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EAFE808F1CF29E1F0046CC7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFE80A81CF29E1F0046CC7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFE80B31CF29E200046CC7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EAA693F71D18E9A6009D1B35 /* VXXcycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				EAA693F81D18E9A6009D1B35 /* VXXCollectionView.h */,
+				EAA693F91D18E9A6009D1B35 /* VXXCollectionView.m */,
+				EAA693FA1D18E9A6009D1B35 /* VXXCollectionViewCell.h */,
+				EAA693FB1D18E9A6009D1B35 /* VXXCollectionViewCell.m */,
+				EAA693FC1D18E9A6009D1B35 /* VXXCollectionViewLayout.h */,
+				EAA693FD1D18E9A6009D1B35 /* VXXCollectionViewLayout.m */,
+				EAA693FE1D18E9A6009D1B35 /* VXXcycleScrollView.h */,
+				EAA693FF1D18E9A6009D1B35 /* VXXcycleScrollView.m */,
+			);
+			path = VXXcycleScrollView;
+			sourceTree = "<group>";
+		};
+		EAFE80891CF29E1F0046CC7E = {
+			isa = PBXGroup;
+			children = (
+				EAFE80941CF29E1F0046CC7E /* 图片轮播器案例 */,
+				EAFE80AE1CF29E1F0046CC7E /* 图片轮播器案例Tests */,
+				EAFE80B91CF29E200046CC7E /* 图片轮播器案例UITests */,
+				EAFE80931CF29E1F0046CC7E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EAFE80931CF29E1F0046CC7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAFE80921CF29E1F0046CC7E /* 图片轮播器案例.app */,
+				EAFE80AB1CF29E1F0046CC7E /* 图片轮播器案例Tests.xctest */,
+				EAFE80B61CF29E200046CC7E /* 图片轮播器案例UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAFE80941CF29E1F0046CC7E /* 图片轮播器案例 */ = {
+			isa = PBXGroup;
+			children = (
+				EAFE80C81CF29E2C0046CC7E /* XXcycleScrollView */,
+				EAFE80981CF29E1F0046CC7E /* AppDelegate.h */,
+				EAFE80991CF29E1F0046CC7E /* AppDelegate.m */,
+				EAFE809B1CF29E1F0046CC7E /* ViewController.h */,
+				EAFE809C1CF29E1F0046CC7E /* ViewController.m */,
+				EAFE809E1CF29E1F0046CC7E /* Main.storyboard */,
+				EAFE80A11CF29E1F0046CC7E /* Assets.xcassets */,
+				EAFE80A31CF29E1F0046CC7E /* LaunchScreen.storyboard */,
+				EAFE80A61CF29E1F0046CC7E /* Info.plist */,
+				EAFE80951CF29E1F0046CC7E /* Supporting Files */,
+			);
+			path = "图片轮播器案例";
+			sourceTree = "<group>";
+		};
+		EAFE80951CF29E1F0046CC7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EAFE80961CF29E1F0046CC7E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EAFE80AE1CF29E1F0046CC7E /* 图片轮播器案例Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EAFE80AF1CF29E200046CC7E /* _______Tests.m */,
+				EAFE80B11CF29E200046CC7E /* Info.plist */,
+			);
+			path = "图片轮播器案例Tests";
+			sourceTree = "<group>";
+		};
+		EAFE80B91CF29E200046CC7E /* 图片轮播器案例UITests */ = {
+			isa = PBXGroup;
+			children = (
+				EAFE80BA1CF29E200046CC7E /* _______UITests.m */,
+				EAFE80BC1CF29E200046CC7E /* Info.plist */,
+			);
+			path = "图片轮播器案例UITests";
+			sourceTree = "<group>";
+		};
+		EAFE80C81CF29E2C0046CC7E /* XXcycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				EAA693F71D18E9A6009D1B35 /* VXXcycleScrollView */,
+				EAFE80C91CF29F660046CC7E /* frameWork */,
+			);
+			name = XXcycleScrollView;
+			sourceTree = "<group>";
+		};
+		EAFE80C91CF29F660046CC7E /* frameWork */ = {
+			isa = PBXGroup;
+			children = (
+				EAFE80CA1CF2A0150046CC7E /* Masonry */,
+			);
+			name = frameWork;
+			sourceTree = "<group>";
+		};
+		EAFE80CA1CF2A0150046CC7E /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				EAFE80CB1CF2A0150046CC7E /* MASCompositeConstraint.h */,
+				EAFE80CC1CF2A0150046CC7E /* MASCompositeConstraint.m */,
+				EAFE80CD1CF2A0150046CC7E /* MASConstraint+Private.h */,
+				EAFE80CE1CF2A0150046CC7E /* MASConstraint.h */,
+				EAFE80CF1CF2A0150046CC7E /* MASConstraint.m */,
+				EAFE80D01CF2A0150046CC7E /* MASConstraintMaker.h */,
+				EAFE80D11CF2A0150046CC7E /* MASConstraintMaker.m */,
+				EAFE80D21CF2A0150046CC7E /* MASLayoutConstraint.h */,
+				EAFE80D31CF2A0150046CC7E /* MASLayoutConstraint.m */,
+				EAFE80D41CF2A0150046CC7E /* Masonry.h */,
+				EAFE80D51CF2A0150046CC7E /* MASUtilities.h */,
+				EAFE80D61CF2A0150046CC7E /* MASViewAttribute.h */,
+				EAFE80D71CF2A0150046CC7E /* MASViewAttribute.m */,
+				EAFE80D81CF2A0150046CC7E /* MASViewConstraint.h */,
+				EAFE80D91CF2A0150046CC7E /* MASViewConstraint.m */,
+				EAFE80DA1CF2A0150046CC7E /* NSArray+MASAdditions.h */,
+				EAFE80DB1CF2A0150046CC7E /* NSArray+MASAdditions.m */,
+				EAFE80DC1CF2A0150046CC7E /* NSArray+MASShorthandAdditions.h */,
+				EAFE80DD1CF2A0150046CC7E /* NSLayoutConstraint+MASDebugAdditions.h */,
+				EAFE80DE1CF2A0150046CC7E /* NSLayoutConstraint+MASDebugAdditions.m */,
+				EAFE80DF1CF2A0150046CC7E /* View+MASAdditions.h */,
+				EAFE80E01CF2A0150046CC7E /* View+MASAdditions.m */,
+				EAFE80E11CF2A0150046CC7E /* View+MASShorthandAdditions.h */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EAFE80911CF29E1F0046CC7E /* 图片轮播器案例 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAFE80BF1CF29E200046CC7E /* Build configuration list for PBXNativeTarget "图片轮播器案例" */;
+			buildPhases = (
+				EAFE808E1CF29E1F0046CC7E /* Sources */,
+				EAFE808F1CF29E1F0046CC7E /* Frameworks */,
+				EAFE80901CF29E1F0046CC7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "图片轮播器案例";
+			productName = "图片轮播器案例";
+			productReference = EAFE80921CF29E1F0046CC7E /* 图片轮播器案例.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EAFE80AA1CF29E1F0046CC7E /* 图片轮播器案例Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAFE80C21CF29E200046CC7E /* Build configuration list for PBXNativeTarget "图片轮播器案例Tests" */;
+			buildPhases = (
+				EAFE80A71CF29E1F0046CC7E /* Sources */,
+				EAFE80A81CF29E1F0046CC7E /* Frameworks */,
+				EAFE80A91CF29E1F0046CC7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAFE80AD1CF29E1F0046CC7E /* PBXTargetDependency */,
+			);
+			name = "图片轮播器案例Tests";
+			productName = "图片轮播器案例Tests";
+			productReference = EAFE80AB1CF29E1F0046CC7E /* 图片轮播器案例Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EAFE80B51CF29E200046CC7E /* 图片轮播器案例UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAFE80C51CF29E200046CC7E /* Build configuration list for PBXNativeTarget "图片轮播器案例UITests" */;
+			buildPhases = (
+				EAFE80B21CF29E200046CC7E /* Sources */,
+				EAFE80B31CF29E200046CC7E /* Frameworks */,
+				EAFE80B41CF29E200046CC7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAFE80B81CF29E200046CC7E /* PBXTargetDependency */,
+			);
+			name = "图片轮播器案例UITests";
+			productName = "图片轮播器案例UITests";
+			productReference = EAFE80B61CF29E200046CC7E /* 图片轮播器案例UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EAFE808A1CF29E1F0046CC7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = wangkun;
+				TargetAttributes = {
+					EAFE80911CF29E1F0046CC7E = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = GCFW8EF2TE;
+					};
+					EAFE80AA1CF29E1F0046CC7E = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = EAFE80911CF29E1F0046CC7E;
+					};
+					EAFE80B51CF29E200046CC7E = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = EAFE80911CF29E1F0046CC7E;
+					};
+				};
+			};
+			buildConfigurationList = EAFE808D1CF29E1F0046CC7E /* Build configuration list for PBXProject "图片轮播器案例" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EAFE80891CF29E1F0046CC7E;
+			productRefGroup = EAFE80931CF29E1F0046CC7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAFE80911CF29E1F0046CC7E /* 图片轮播器案例 */,
+				EAFE80AA1CF29E1F0046CC7E /* 图片轮播器案例Tests */,
+				EAFE80B51CF29E200046CC7E /* 图片轮播器案例UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EAFE80901CF29E1F0046CC7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFE80A51CF29E1F0046CC7E /* LaunchScreen.storyboard in Resources */,
+				EAFE80A21CF29E1F0046CC7E /* Assets.xcassets in Resources */,
+				EAFE80A01CF29E1F0046CC7E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFE80A91CF29E1F0046CC7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFE80B41CF29E200046CC7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAFE808E1CF29E1F0046CC7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFE80E91CF2A0150046CC7E /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				EAA694011D18E9A6009D1B35 /* VXXCollectionViewCell.m in Sources */,
+				EAFE80E71CF2A0150046CC7E /* MASViewConstraint.m in Sources */,
+				EAA694001D18E9A6009D1B35 /* VXXCollectionView.m in Sources */,
+				EAA694021D18E9A6009D1B35 /* VXXCollectionViewLayout.m in Sources */,
+				EAFE80E21CF2A0150046CC7E /* MASCompositeConstraint.m in Sources */,
+				EAFE80E81CF2A0150046CC7E /* NSArray+MASAdditions.m in Sources */,
+				EAFE809D1CF29E1F0046CC7E /* ViewController.m in Sources */,
+				EAFE809A1CF29E1F0046CC7E /* AppDelegate.m in Sources */,
+				EAFE80E51CF2A0150046CC7E /* MASLayoutConstraint.m in Sources */,
+				EAFE80971CF29E1F0046CC7E /* main.m in Sources */,
+				EAFE80EA1CF2A0150046CC7E /* View+MASAdditions.m in Sources */,
+				EAFE80E61CF2A0150046CC7E /* MASViewAttribute.m in Sources */,
+				EAFE80E31CF2A0150046CC7E /* MASConstraint.m in Sources */,
+				EAFE80E41CF2A0150046CC7E /* MASConstraintMaker.m in Sources */,
+				EAA694031D18E9A6009D1B35 /* VXXcycleScrollView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFE80A71CF29E1F0046CC7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFE80B01CF29E200046CC7E /* _______Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFE80B21CF29E200046CC7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFE80BB1CF29E200046CC7E /* _______UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAFE80AD1CF29E1F0046CC7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAFE80911CF29E1F0046CC7E /* 图片轮播器案例 */;
+			targetProxy = EAFE80AC1CF29E1F0046CC7E /* PBXContainerItemProxy */;
+		};
+		EAFE80B81CF29E200046CC7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAFE80911CF29E1F0046CC7E /* 图片轮播器案例 */;
+			targetProxy = EAFE80B71CF29E200046CC7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EAFE809E1CF29E1F0046CC7E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAFE809F1CF29E1F0046CC7E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EAFE80A31CF29E1F0046CC7E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAFE80A41CF29E1F0046CC7E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EAFE80BD1CF29E200046CC7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EAFE80BE1CF29E200046CC7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EAFE80C01CF29E200046CC7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "图片轮播器案例/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wangkun.ios.-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		EAFE80C11CF29E200046CC7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "图片轮播器案例/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wangkun.ios.-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		EAFE80C31CF29E200046CC7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "图片轮播器案例Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wangkun.ios.-------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/图片轮播器案例.app/图片轮播器案例";
+			};
+			name = Debug;
+		};
+		EAFE80C41CF29E200046CC7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "图片轮播器案例Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wangkun.ios.-------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/图片轮播器案例.app/图片轮播器案例";
+			};
+			name = Release;
+		};
+		EAFE80C61CF29E200046CC7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "图片轮播器案例UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wangkun.ios.-------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "图片轮播器案例";
+			};
+			name = Debug;
+		};
+		EAFE80C71CF29E200046CC7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "图片轮播器案例UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wangkun.ios.-------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "图片轮播器案例";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EAFE808D1CF29E1F0046CC7E /* Build configuration list for PBXProject "图片轮播器案例" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFE80BD1CF29E200046CC7E /* Debug */,
+				EAFE80BE1CF29E200046CC7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAFE80BF1CF29E200046CC7E /* Build configuration list for PBXNativeTarget "图片轮播器案例" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFE80C01CF29E200046CC7E /* Debug */,
+				EAFE80C11CF29E200046CC7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAFE80C21CF29E200046CC7E /* Build configuration list for PBXNativeTarget "图片轮播器案例Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFE80C31CF29E200046CC7E /* Debug */,
+				EAFE80C41CF29E200046CC7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAFE80C51CF29E200046CC7E /* Build configuration list for PBXNativeTarget "图片轮播器案例UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFE80C61CF29E200046CC7E /* Debug */,
+				EAFE80C71CF29E200046CC7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EAFE808A1CF29E1F0046CC7E /* Project object */;
+}
