@@ -13,6 +13,8 @@
 
 @property (strong,nonatomic) UIImage* img;
 
+@property (copy,nonatomic) NSString* imgpath;
+
 +(instancetype)collectionViewCellWithCollectionView:(VXXCollectionView*)collectionView andIndexPath:(NSIndexPath*)indexPath;
 
 @end

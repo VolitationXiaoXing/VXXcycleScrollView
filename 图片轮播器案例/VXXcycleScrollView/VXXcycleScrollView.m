@@ -10,8 +10,11 @@
 #import "VXXCollectionView.h"
 #import "VXXCollectionViewLayout.h"
 #import "VXXCollectionViewCell.h"
-
-#define DEFINECOUNT 5
+#import <UIImageView+WebCache.h>
+typedef enum : NSUInteger {
+    ImgModeNet,
+    ImgModePath,
+} ImgMode;
 
 @interface VXXcycleScrollView ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -24,7 +27,6 @@
 
 @property (weak,nonatomic) UIPageControl* pageControl;
 
-//图片资源
 @property (strong,nonatomic) NSArray* res;
 
 //当前页面
@@ -35,10 +37,21 @@
 
 @property (strong,nonatomic) NSTimer* timer;
 
+@property (assign,nonatomic) ImgMode imgMode;
+
 @end
 
 
 @implementation VXXcycleScrollView
+
++(instancetype)cycleScrollViewWithFrame:(CGRect)frame{
+    
+    VXXcycleScrollView* view = [[VXXcycleScrollView alloc]initWithFrame:frame andResoucre:nil];
+    
+    return view;
+}
+
+
 /**
  *  这个方法返回一个图片轮播器
  *
@@ -83,29 +96,14 @@
         
         self.collectionView.showsHorizontalScrollIndicator = NO;
         
-        self.onceTime = 2;
+        self.onceTime = 5;
         
         NSIndexPath* ip = [NSIndexPath indexPathForItem:1 inSection:0];
         [self.collectionView scrollToItemAtIndexPath:ip atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
         
         self.nowIndex = 1;
         
-        UIPageControl* page = [[UIPageControl alloc]init];
         
-        self.pageControl = page;
-        
-        CGFloat x = 0;
-        CGFloat width = self.bounds.size.width;
-        CGFloat height = 20;
-        CGFloat y = self.bounds.size.height - 10 - height;
-        
-        self.pageControl.frame =CGRectMake(x, y, width, height);
-        
-        [self addSubview:self.pageControl];
-        
-        self.pageControl.numberOfPages = DEFINECOUNT;
-        
-        self.pageControl.currentPage = self.nowIndex;
         
         self.timer = [NSTimer scheduledTimerWithTimeInterval:self.onceTime target:self selector:@selector(autoNext) userInfo:nil repeats:YES];
         NSRunLoop *runloop = [NSRunLoop currentRunLoop];
@@ -113,6 +111,55 @@
     }
     
     return self;
+}
+
+-(void)setResource:(NSArray *)resource{
+    
+    _resource = resource;
+    
+    _res = resource;
+}
+
+
+-(void)setFrame:(CGRect)frame{
+    
+    [super setFrame:frame];
+    
+    self.layout.itemSize = frame.size;
+    
+    self.collectionView.frame = frame;
+    
+    [self setPageControl];
+    
+}
+
+-(void)setPageControl{
+    
+    UIPageControl* page = [[UIPageControl alloc]init];
+    
+    self.pageControl = page;
+    
+    [self addSubview:self.pageControl];
+    
+    self.pageControl.numberOfPages = 5;
+    
+    CGFloat x = 0;
+    CGFloat width = self.bounds.size.width;
+    CGFloat height = 20;
+    CGFloat y = self.bounds.size.height - 5 - height;
+    
+    self.pageControl.backgroundColor = [UIColor redColor];
+    
+    self.pageControl.frame =CGRectMake(x, y, width, height);
+    
+    self.pageControl.numberOfPages = self.res.count;
+    
+    self.pageControl.currentPage = self.nowIndex;
+    
+    self.pageControl.pageIndicatorTintColor = [UIColor blackColor];
+    
+    self.pageControl.currentPageIndicatorTintColor = [UIColor greenColor];
+    
 }
 
 #pragma mark- 定时器跳转
@@ -190,9 +237,20 @@
             }
         }
         
-        UIImage* img = [UIImage imageNamed:self.res[x]];
-
-        cell.img = img;
+        
+        if (self.imgMode == ImgModeNet) {
+            
+            cell.imgpath = self.res[x];
+            
+            
+        }else{
+            
+            UIImage* img = [UIImage imageNamed:self.res[x]];
+            
+            cell.img = img;
+        
+        }
+    
     }
     
     return cell;
@@ -228,7 +286,9 @@
 
 -(void)nextImg{
     self.pageControl.currentPage = self.nowIndex;
+    
     NSIndexPath* ip = [NSIndexPath indexPathForItem:1 inSection:0];
+    
     [self.collectionView scrollToItemAtIndexPath:ip atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
 }
 

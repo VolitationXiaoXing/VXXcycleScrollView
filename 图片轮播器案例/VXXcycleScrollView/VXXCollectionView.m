@@ -21,8 +21,6 @@ static NSString* const ID = @"cell";
     
     VXXCollectionView* view = [[VXXCollectionView alloc]initWithFrame:frame collectionViewLayout:layout];
     
-    view.backgroundColor = [UIColor greenColor];
-    
     return view;
 }
 

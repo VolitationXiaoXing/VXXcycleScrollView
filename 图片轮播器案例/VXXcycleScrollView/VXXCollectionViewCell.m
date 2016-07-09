@@ -8,6 +8,8 @@
 
 #import "VXXCollectionViewCell.h"
 #import "VXXCollectionView.h"
+#import <UIButton+WebCache.h>
+
 
 @interface VXXCollectionViewCell ()
 
@@ -24,9 +26,6 @@ static NSString* const ID = @"cell";
 +(instancetype)collectionViewCellWithCollectionView:(VXXCollectionView *)collectionView andIndexPath:(NSIndexPath*)indexPath{
     
     VXXCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
-   
-    
-    cell.backgroundColor =  [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
     
     cell.indexPath = indexPath;
 
@@ -47,15 +46,32 @@ static NSString* const ID = @"cell";
     return self;
 }
 
+
+-(void)setImgpath:(NSString *)imgpath{
+    
+    NSURL* url = [NSURL URLWithString:imgpath];
+    
+//    [self.btnImg sd_setBackgroundImageWithURL:url forState:UIControlStateNormal];
+    
+    [self.btnImg sd_setImageWithURL:url forState:UIControlStateNormal completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        [self setImg:image];
+    }];
+    
+    [self.btnImg setTitle:@"" forState:UIControlStateNormal];
+    
+}
+
 -(void)setImg:(UIImage *)img{
+    
+    
     if (!img) {
-        
         NSString* s = [NSString stringWithFormat:@"这是第%ld个",self.indexPath.row];
-        
         [self.btnImg setTitle:s forState:UIControlStateNormal];
+        
     }else{
         _img = img;
         //这里设置图片
+       
         if (self.img) {
             [self.btnImg setBackgroundImage:self.img forState:UIControlStateNormal];
         }
@@ -64,10 +80,10 @@ static NSString* const ID = @"cell";
 
 
 -(void)layoutSubviews{
+    
     [super layoutSubviews];
     
     self.btnImg.frame = self.bounds;
-    
 }
 
 @end

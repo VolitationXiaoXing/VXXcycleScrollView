@@ -12,4 +12,9 @@
 
 +(instancetype)cycleScrollViewWithFrame:(CGRect)frame andResoucre:(NSArray*)res;
 
++(instancetype)cycleScrollViewWithFrame:(CGRect)frame;
+
+//图片资源
+@property (strong,nonatomic) NSArray* resource;
+
 @end
