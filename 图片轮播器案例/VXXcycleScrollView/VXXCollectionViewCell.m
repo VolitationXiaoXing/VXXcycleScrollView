@@ -8,7 +8,7 @@
 
 #import "VXXCollectionViewCell.h"
 #import "VXXCollectionView.h"
-#import <UIButton+WebCache.h>
+#import "UIButton+WebCache.h"
 
 
 @interface VXXCollectionViewCell ()

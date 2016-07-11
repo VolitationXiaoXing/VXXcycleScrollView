@@ -10,7 +10,7 @@
 #import "VXXCollectionView.h"
 #import "VXXCollectionViewLayout.h"
 #import "VXXCollectionViewCell.h"
-#import <UIImageView+WebCache.h>
+#import "UIImageView+WebCache.h"
 typedef enum : NSUInteger {
     ImgModeNet,
     ImgModePath,
