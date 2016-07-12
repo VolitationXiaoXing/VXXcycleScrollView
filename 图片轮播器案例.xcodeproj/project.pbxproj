@@ -33,8 +33,6 @@
 		EAFE80A01CF29E1F0046CC7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFE809E1CF29E1F0046CC7E /* Main.storyboard */; };
 		EAFE80A21CF29E1F0046CC7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFE80A11CF29E1F0046CC7E /* Assets.xcassets */; };
 		EAFE80A51CF29E1F0046CC7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFE80A31CF29E1F0046CC7E /* LaunchScreen.storyboard */; };
-		EAFE80B01CF29E200046CC7E /* _______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80AF1CF29E200046CC7E /* _______Tests.m */; };
-		EAFE80BB1CF29E200046CC7E /* _______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80BA1CF29E200046CC7E /* _______UITests.m */; };
 		EAFE80E21CF2A0150046CC7E /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80CC1CF2A0150046CC7E /* MASCompositeConstraint.m */; };
 		EAFE80E31CF2A0150046CC7E /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80CF1CF2A0150046CC7E /* MASConstraint.m */; };
 		EAFE80E41CF2A0150046CC7E /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE80D11CF2A0150046CC7E /* MASConstraintMaker.m */; };
@@ -116,11 +114,7 @@
 		EAFE80A41CF29E1F0046CC7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAFE80A61CF29E1F0046CC7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAFE80AB1CF29E1F0046CC7E /* 图片轮播器案例Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "图片轮播器案例Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAFE80AF1CF29E200046CC7E /* _______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______Tests.m"; sourceTree = "<group>"; };
-		EAFE80B11CF29E200046CC7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAFE80B61CF29E200046CC7E /* 图片轮播器案例UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "图片轮播器案例UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAFE80BA1CF29E200046CC7E /* _______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______UITests.m"; sourceTree = "<group>"; };
-		EAFE80BC1CF29E200046CC7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAFE80CB1CF2A0150046CC7E /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		EAFE80CC1CF2A0150046CC7E /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		EAFE80CD1CF2A0150046CC7E /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -230,8 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				EAFE80941CF29E1F0046CC7E /* 图片轮播器案例 */,
-				EAFE80AE1CF29E1F0046CC7E /* 图片轮播器案例Tests */,
-				EAFE80B91CF29E200046CC7E /* 图片轮播器案例UITests */,
 				EAFE80931CF29E1F0046CC7E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -269,24 +261,6 @@
 				EAFE80961CF29E1F0046CC7E /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		EAFE80AE1CF29E1F0046CC7E /* 图片轮播器案例Tests */ = {
-			isa = PBXGroup;
-			children = (
-				EAFE80AF1CF29E200046CC7E /* _______Tests.m */,
-				EAFE80B11CF29E200046CC7E /* Info.plist */,
-			);
-			path = "图片轮播器案例Tests";
-			sourceTree = "<group>";
-		};
-		EAFE80B91CF29E200046CC7E /* 图片轮播器案例UITests */ = {
-			isa = PBXGroup;
-			children = (
-				EAFE80BA1CF29E200046CC7E /* _______UITests.m */,
-				EAFE80BC1CF29E200046CC7E /* Info.plist */,
-			);
-			path = "图片轮播器案例UITests";
 			sourceTree = "<group>";
 		};
 		EAFE80C81CF29E2C0046CC7E /* XXcycleScrollView */ = {
@@ -507,7 +481,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAFE80B01CF29E200046CC7E /* _______Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +488,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAFE80BB1CF29E200046CC7E /* _______UITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
