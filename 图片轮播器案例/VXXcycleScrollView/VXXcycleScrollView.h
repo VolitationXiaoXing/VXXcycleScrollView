@@ -14,7 +14,11 @@
 
 +(instancetype)cycleScrollViewWithFrame:(CGRect)frame;
 
+
 //图片资源
-@property (strong,nonatomic) NSArray* resource;
+@property (strong,nonatomic) NSArray* res;
+
+//每次切换图片时间
+@property (assign,nonatomic) CGFloat onceTime;
 
 @end

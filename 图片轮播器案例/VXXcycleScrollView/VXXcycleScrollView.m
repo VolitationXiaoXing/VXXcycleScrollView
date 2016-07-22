@@ -27,13 +27,10 @@ typedef enum : NSUInteger {
 
 @property (weak,nonatomic) UIPageControl* pageControl;
 
-@property (strong,nonatomic) NSArray* res;
 
 //当前页面
 @property (assign,nonatomic) NSInteger nowIndex;
 
-//每次切换图片时间
-@property (assign,nonatomic) CGFloat onceTime;
 
 @property (strong,nonatomic) NSTimer* timer;
 
@@ -61,7 +58,31 @@ typedef enum : NSUInteger {
 +(instancetype)cycleScrollViewWithFrame:(CGRect)frame andResoucre:(NSArray*)res{
     
     VXXcycleScrollView* view = [[VXXcycleScrollView alloc]initWithFrame:frame andResoucre:res];
-    view.backgroundColor = [UIColor redColor];
+    
+    //在这里判断传过来的res是否是网络请求还是本地数据
+    id data = res[0];
+    
+    
+    if ([[data class] isSubclassOfClass:[NSString class]]) {
+        
+        NSString* s = data;
+        
+        if ([s hasPrefix:@"http"]) {
+            
+            view.imgMode = ImgModeNet;
+            
+        }else{
+            
+             view.imgMode = ImgModePath;
+        }
+        
+    }else{
+        
+        NSAssert([[data class] isSubclassOfClass:[NSString class]]||data == nil, @"数据传递错误了,只能传字符串");
+        
+    }
+    
+
     
     return view;
 }
@@ -96,14 +117,14 @@ typedef enum : NSUInteger {
         
         self.collectionView.showsHorizontalScrollIndicator = NO;
         
-        self.onceTime = 5;
+        self.onceTime = 3;
+        
+        [self setPageControl];
         
         NSIndexPath* ip = [NSIndexPath indexPathForItem:1 inSection:0];
         [self.collectionView scrollToItemAtIndexPath:ip atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
         
         self.nowIndex = 1;
-        
-        
         
         self.timer = [NSTimer scheduledTimerWithTimeInterval:self.onceTime target:self selector:@selector(autoNext) userInfo:nil repeats:YES];
         NSRunLoop *runloop = [NSRunLoop currentRunLoop];
@@ -111,26 +132,6 @@ typedef enum : NSUInteger {
     }
     
     return self;
-}
-
--(void)setResource:(NSArray *)resource{
-    
-    _resource = resource;
-    
-    _res = resource;
-}
-
-
--(void)setFrame:(CGRect)frame{
-    
-    [super setFrame:frame];
-    
-    self.layout.itemSize = frame.size;
-    
-    self.collectionView.frame = frame;
-    
-    [self setPageControl];
-    
 }
 
 -(void)setPageControl{
@@ -148,17 +149,15 @@ typedef enum : NSUInteger {
     CGFloat height = 20;
     CGFloat y = self.bounds.size.height - 5 - height;
     
-    self.pageControl.backgroundColor = [UIColor redColor];
-    
     self.pageControl.frame =CGRectMake(x, y, width, height);
     
     self.pageControl.numberOfPages = self.res.count;
     
     self.pageControl.currentPage = self.nowIndex;
     
-    self.pageControl.pageIndicatorTintColor = [UIColor blackColor];
+    self.pageControl.pageIndicatorTintColor = [UIColor grayColor];
     
-    self.pageControl.currentPageIndicatorTintColor = [UIColor greenColor];
+    self.pageControl.currentPageIndicatorTintColor = [UIColor redColor];
     
 }
 
