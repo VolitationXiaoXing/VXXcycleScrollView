@@ -29,4 +29,10 @@
 //每次切换图片时间，这里默认是3秒
 @property (assign,nonatomic) CGFloat onceTime;
 
+//没有选中的页面指示器颜色
+@property (strong,nonatomic) UIColor* pageTintColor;
+///选中的页面指示器颜色
+@property (strong,nonatomic) UIColor* currentPageTintColor;
+
+
 @end

@@ -12,6 +12,7 @@
 
 
 @implementation VXXCollectionView
+
 /**
  *  cell重用ID
  */
@@ -29,6 +30,12 @@ static NSString* const ID = @"cell";
     if (self = [super initWithFrame:frame collectionViewLayout:layout]) {
         
         [self registerClass:[VXXCollectionViewCell class] forCellWithReuseIdentifier:ID];
+        
+        self.bounces = NO;
+        
+        self.pagingEnabled = YES;
+        
+        self.showsHorizontalScrollIndicator = NO;
         
     }
     

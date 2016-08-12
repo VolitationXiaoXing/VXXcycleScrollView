@@ -47,15 +47,10 @@ typedef enum : NSUInteger {
     return view;
 }
 
-
-
-+(instancetype)cycleScrollViewWithFrame:(CGRect)frame andResoucre:(NSArray*)res{
-    
-    VXXcycleScrollView* view = [[VXXcycleScrollView alloc]initWithFrame:frame andResoucre:res];
+-(void)setRes:(NSArray *)res{
     
     //在这里判断传过来的res是否是网络请求还是本地数据
     id data = res[0];
-    
     
     if ([[data class] isSubclassOfClass:[NSString class]]) {
         
@@ -63,11 +58,11 @@ typedef enum : NSUInteger {
         
         if ([s hasPrefix:@"http"]) {
             
-            view.imgMode = ImgModeNet;
+            self.imgMode = ImgModeNet;
             
         }else{
             
-             view.imgMode = ImgModePath;
+            self.imgMode = ImgModePath;
         }
         
     }else{
@@ -76,8 +71,18 @@ typedef enum : NSUInteger {
         
     }
     
-
+    if (self.pageControl) {
+        
+        self.pageControl.numberOfPages = res.count;
+        
+    }
     
+}
+
++(instancetype)cycleScrollViewWithFrame:(CGRect)frame andResoucre:(NSArray*)res{
+    
+    VXXcycleScrollView* view = [[VXXcycleScrollView alloc]initWithFrame:frame andResoucre:res];
+
     return view;
 }
 
@@ -104,13 +109,7 @@ typedef enum : NSUInteger {
         self.collectionView.dataSource = self;
         
         self.collectionView.delegate = self;
-        
-        self.collectionView.bounces = NO;
-        
-        self.collectionView.pagingEnabled = YES;
-        
-        self.collectionView.showsHorizontalScrollIndicator = NO;
-        
+
         self.onceTime = 3;
         
         [self setPageControl];
@@ -141,22 +140,41 @@ typedef enum : NSUInteger {
     
     self.pageControl.numberOfPages = 5;
     
-    CGFloat x = 0;
-    CGFloat width = self.bounds.size.width;
-    CGFloat height = 20;
-    CGFloat y = self.bounds.size.height - 5 - height;
-    
-    self.pageControl.frame =CGRectMake(x, y, width, height);
-    
     self.pageControl.numberOfPages = self.res.count;
     
     self.pageControl.currentPage = self.nowIndex;
     
     self.pageControl.pageIndicatorTintColor = [UIColor grayColor];
     
+    self.pageTintColor =  self.pageControl.pageIndicatorTintColor;
+    
     self.pageControl.currentPageIndicatorTintColor = [UIColor redColor];
     
+    self.currentPageTintColor = self.pageControl.currentPageIndicatorTintColor;
 }
+
+-(void)layoutSubviews{
+    
+    [super layoutSubviews];
+    
+    //子空间布局
+    
+    if(self.pageControl){
+        
+        CGFloat x = 0;
+        CGFloat width = self.bounds.size.width;
+        CGFloat height = 20;
+        CGFloat y = self.bounds.size.height - 5 - height;
+        
+        self.pageControl.frame =CGRectMake(x, y, width, height);
+    }
+    
+    
+    
+    
+    
+}
+
 
 #pragma mark- 定时器跳转
 -(void)autoNext{
@@ -259,16 +277,25 @@ typedef enum : NSUInteger {
     CGFloat times = p.x / self.collectionView.bounds.size.width;
     
     if (times == 0) {
+        
         if (self.nowIndex == 0) {
+            
             self.nowIndex = self.res.count -1;
+            
         }else{
+            
             self.nowIndex--;
+            
         }
     }else if(times >= 2){
         for (int i = 1; i < times; i++) {
+            
             if (self.nowIndex == self.res.count - 1) {
+                
                 self.nowIndex = 0;
+                
             }else{
+                
                 self.nowIndex++;
             }
         }
@@ -296,10 +323,28 @@ typedef enum : NSUInteger {
 }
 
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    
     //结束时从新开启定时器
     self.timer = [NSTimer scheduledTimerWithTimeInterval:self.onceTime target:self selector:@selector(autoNext) userInfo:nil repeats:YES];
+    
     NSRunLoop *runloop = [NSRunLoop currentRunLoop];
+    
     [runloop addTimer:self.timer forMode:NSRunLoopCommonModes];
+}
+
+#pragma mark- 属性的设置方法
+
+-(void)setCurrentPageTintColor:(UIColor *)currentPageTintColor{
+    _currentPageTintColor = currentPageTintColor;
+    
+    self.pageControl.currentPageIndicatorTintColor = currentPageTintColor;
+}
+
+-(void)setPageTintColor:(UIColor *)pageTintColor{
+    
+    _currentPageTintColor = pageTintColor;
+    
+    self.pageControl.pageIndicatorTintColor = pageTintColor;
 }
 
 
