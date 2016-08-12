@@ -14,7 +14,7 @@
 
 @interface VXXCollectionViewCell ()
 
-@property (weak,nonatomic) UIButton* btnImg;
+@property (weak,nonatomic) VXXButton* btnImg;
 
 @property (strong,nonatomic) NSIndexPath* indexPath;
 
@@ -44,6 +44,8 @@ static NSString* const ID = @"cell";
         
         self.btnImg = btn;
         
+        [self.btnImg addTarget:self action:@selector(onBtnclicked) forControlEvents:UIControlEventTouchUpInside];
+        
     }
     return self;
 }
@@ -68,7 +70,7 @@ static NSString* const ID = @"cell";
 -(void)setImg:(UIImage *)img{
     
     if (!img) {
-        NSString* s = [NSString stringWithFormat:@"这是第%ld个",self.indexPath.row];
+        NSString* s = [NSString stringWithFormat:@"数据拼命加载中..."];
         
         [self.btnImg setTitle:s forState:UIControlStateNormal];
         
@@ -85,6 +87,15 @@ static NSString* const ID = @"cell";
     }
 }
 
+-(void)onBtnclicked{
+    //图片被点击了
+    if (self.onBtnClicked) {
+        
+        self.onBtnClicked();
+        
+    }
+    
+}
 
 -(void)layoutSubviews{
     

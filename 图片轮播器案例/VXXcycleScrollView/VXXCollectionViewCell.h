@@ -17,4 +17,6 @@
 
 +(instancetype)collectionViewCellWithCollectionView:(VXXCollectionView*)collectionView andIndexPath:(NSIndexPath*)indexPath;
 
+@property (copy,nonatomic) void(^onBtnClicked)();
+
 @end

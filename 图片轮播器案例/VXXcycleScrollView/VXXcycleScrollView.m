@@ -27,7 +27,7 @@ typedef enum : NSUInteger {
 
 @property (weak,nonatomic) UIPageControl* pageControl;
 
-
+@property (assign,nonatomic) BOOL isFirst;
 
 
 
@@ -67,6 +67,10 @@ typedef enum : NSUInteger {
             self.imgMode = ImgModePath;
         }
         
+    }else if(res == nil){
+        
+        NSLog(@"创建时没有设置数据源");
+        
     }else{
         
         NSAssert([[data class] isSubclassOfClass:[NSString class]]||data == nil, @"数据传递错误了,只能传字符串");
@@ -99,6 +103,8 @@ typedef enum : NSUInteger {
         
         self.res = res;
         
+        self.isFirst = YES;
+        
         VXXCollectionViewLayout* layout = [[VXXCollectionViewLayout alloc]initWithSize:frame.size];
         self.layout = layout;
         
@@ -114,13 +120,14 @@ typedef enum : NSUInteger {
 
         self.onceTime = 3;
         
+        self.nowIndex = 0;
+        
         [self setPageControl];
         
         NSIndexPath* ip = [NSIndexPath indexPathForItem:1 inSection:0];
         
         [self.collectionView scrollToItemAtIndexPath:ip atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
         
-        self.nowIndex = 1;
         
         self.timer = [NSTimer scheduledTimerWithTimeInterval:self.onceTime target:self selector:@selector(autoNext) userInfo:nil repeats:YES];
         
@@ -195,10 +202,21 @@ typedef enum : NSUInteger {
     
     [self.collectionView scrollToItemAtIndexPath:ip atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((self.onceTime*0.8) * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((self.onceTime*0.9) * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    
          [self scrollViewDidEndDecelerating:self.collectionView];
+        
     });
+}
+
+
+-(void)onBtnClicked{
+
+    if ([self.delegate respondsToSelector:@selector(cycleScrollView:didItemClickedAtIndex:)]) {
+        
+        [self.delegate cycleScrollView:self didItemClickedAtIndex:self.pageControl.currentPage];
+    }
+    
 }
 
 #pragma mark- collectionView数据源方法
@@ -218,11 +236,12 @@ typedef enum : NSUInteger {
     
     VXXCollectionViewCell* cell = [VXXCollectionViewCell collectionViewCellWithCollectionView:self.collectionView andIndexPath:indexPath];
     
-    if (!self.res) {
+    cell.onBtnClicked = ^{
         
-        cell.img = nil;
+        [self onBtnClicked];
         
-    }else{
+    };
+    
         //这里是有图片的情况
         NSInteger x = self.nowIndex;
         
@@ -261,8 +280,6 @@ typedef enum : NSUInteger {
         
         }
     
-    }
-    
     return cell;
 }
 
@@ -284,9 +301,9 @@ typedef enum : NSUInteger {
             self.nowIndex--;
             
         }
+        
     }else if(times >= 2){
-        for (int i = 1; i < times; i++) {
-            
+        
             if (self.nowIndex == self.res.count - 1) {
                 
                 self.nowIndex = 0;
@@ -295,7 +312,7 @@ typedef enum : NSUInteger {
                 
                 self.nowIndex++;
             }
-        }
+        
     }
     
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -304,6 +321,7 @@ typedef enum : NSUInteger {
 }
 
 -(void)nextImg{
+    
     self.pageControl.currentPage = self.nowIndex;
     
     NSIndexPath* ip = [NSIndexPath indexPathForItem:1 inSection:0];
