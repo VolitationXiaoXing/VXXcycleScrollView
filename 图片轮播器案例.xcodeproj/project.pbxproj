@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA36103F1D5DF2A700E54CEC /* VXXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EA36103E1D5DF2A700E54CEC /* VXXButton.m */; };
 		EAA694001D18E9A6009D1B35 /* VXXCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA693F91D18E9A6009D1B35 /* VXXCollectionView.m */; };
 		EAA694011D18E9A6009D1B35 /* VXXCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA693FB1D18E9A6009D1B35 /* VXXCollectionViewCell.m */; };
 		EAA694021D18E9A6009D1B35 /* VXXCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA693FD1D18E9A6009D1B35 /* VXXCollectionViewLayout.m */; };
@@ -62,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA36103D1D5DF2A700E54CEC /* VXXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXXButton.h; sourceTree = "<group>"; };
+		EA36103E1D5DF2A700E54CEC /* VXXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXXButton.m; sourceTree = "<group>"; };
 		EAA693F81D18E9A6009D1B35 /* VXXCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXXCollectionView.h; sourceTree = "<group>"; };
 		EAA693F91D18E9A6009D1B35 /* VXXCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXXCollectionView.m; sourceTree = "<group>"; };
 		EAA693FA1D18E9A6009D1B35 /* VXXCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXXCollectionViewCell.h; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 				EACC31B31D425AB30067B755 /* frameWork */,
 				EAA693F81D18E9A6009D1B35 /* VXXCollectionView.h */,
 				EAA693F91D18E9A6009D1B35 /* VXXCollectionView.m */,
+				EA36103D1D5DF2A700E54CEC /* VXXButton.h */,
+				EA36103E1D5DF2A700E54CEC /* VXXButton.m */,
 				EAA693FA1D18E9A6009D1B35 /* VXXCollectionViewCell.h */,
 				EAA693FB1D18E9A6009D1B35 /* VXXCollectionViewCell.m */,
 				EAA693FC1D18E9A6009D1B35 /* VXXCollectionViewLayout.h */,
@@ -464,6 +469,7 @@
 				EACC32021D425AB30067B755 /* UIImage+MultiFormat.m in Sources */,
 				EACC32061D425AB30067B755 /* UIView+WebCacheOperation.m in Sources */,
 				EACC31FA1D425AB30067B755 /* SDWebImageCompat.m in Sources */,
+				EA36103F1D5DF2A700E54CEC /* VXXButton.m in Sources */,
 				EAFE80971CF29E1F0046CC7E /* main.m in Sources */,
 				EAA694031D18E9A6009D1B35 /* VXXcycleScrollView.m in Sources */,
 			);

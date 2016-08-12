@@ -28,8 +28,7 @@ typedef enum : NSUInteger {
 @property (weak,nonatomic) UIPageControl* pageControl;
 
 
-//当前页面
-@property (assign,nonatomic) NSInteger nowIndex;
+
 
 
 @property (strong,nonatomic) NSTimer* timer;
@@ -49,12 +48,7 @@ typedef enum : NSUInteger {
 }
 
 
-/**
- *  这个方法返回一个图片轮播器
- *
- *  @param frame 图片轮播器的大小位置
- *  @param path  图片轮播器的图片的地址数组
- */
+
 +(instancetype)cycleScrollViewWithFrame:(CGRect)frame andResoucre:(NSArray*)res{
     
     VXXcycleScrollView* view = [[VXXcycleScrollView alloc]initWithFrame:frame andResoucre:res];
@@ -122,12 +116,15 @@ typedef enum : NSUInteger {
         [self setPageControl];
         
         NSIndexPath* ip = [NSIndexPath indexPathForItem:1 inSection:0];
+        
         [self.collectionView scrollToItemAtIndexPath:ip atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
         
         self.nowIndex = 1;
         
         self.timer = [NSTimer scheduledTimerWithTimeInterval:self.onceTime target:self selector:@selector(autoNext) userInfo:nil repeats:YES];
+        
         NSRunLoop *runloop = [NSRunLoop currentRunLoop];
+        
         [runloop addTimer:self.timer forMode:NSRunLoopCommonModes];
     }
     
@@ -197,7 +194,6 @@ typedef enum : NSUInteger {
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
     return 3;
-    
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{

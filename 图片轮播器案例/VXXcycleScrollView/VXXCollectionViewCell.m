@@ -9,6 +9,7 @@
 #import "VXXCollectionViewCell.h"
 #import "VXXCollectionView.h"
 #import "UIButton+WebCache.h"
+#import "VXXButton.h"
 
 
 @interface VXXCollectionViewCell ()
@@ -34,9 +35,10 @@ static NSString* const ID = @"cell";
 }
 
 -(instancetype)initWithFrame:(CGRect)frame{
+    
     if (self = [super initWithFrame:frame]) {
         
-        UIButton* btn = [[UIButton alloc]init];
+        VXXButton* btn = [[VXXButton alloc]init];
         
         [self.contentView addSubview:btn];
         
@@ -46,34 +48,41 @@ static NSString* const ID = @"cell";
     return self;
 }
 
-
+//这个是网络上获取图片
 -(void)setImgpath:(NSString *)imgpath{
     
     NSURL* url = [NSURL URLWithString:imgpath];
     
-//    [self.btnImg sd_setBackgroundImageWithURL:url forState:UIControlStateNormal];
     
     [self.btnImg sd_setImageWithURL:url forState:UIControlStateNormal completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        
         [self setImg:image];
+        
+        cacheType = SDImageCacheTypeDisk;
+        
     }];
     
     [self.btnImg setTitle:@"" forState:UIControlStateNormal];
     
 }
 
+//传过来的是图片
 -(void)setImg:(UIImage *)img{
-    
     
     if (!img) {
         NSString* s = [NSString stringWithFormat:@"这是第%ld个",self.indexPath.row];
+        
         [self.btnImg setTitle:s forState:UIControlStateNormal];
         
     }else{
+        
         _img = img;
         //这里设置图片
        
         if (self.img) {
+            
             [self.btnImg setBackgroundImage:self.img forState:UIControlStateNormal];
+            
         }
     }
 }
