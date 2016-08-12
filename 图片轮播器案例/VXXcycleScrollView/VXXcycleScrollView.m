@@ -48,6 +48,8 @@ typedef enum : NSUInteger {
 }
 
 -(void)setRes:(NSArray *)res{
+
+    _res = res;
     
     //在这里判断传过来的res是否是网络请求还是本地数据
     id data = res[0];
@@ -169,10 +171,6 @@ typedef enum : NSUInteger {
         self.pageControl.frame =CGRectMake(x, y, width, height);
     }
     
-    
-    
-    
-    
 }
 
 
@@ -254,8 +252,7 @@ typedef enum : NSUInteger {
         if (self.imgMode == ImgModeNet) {
             
             cell.imgpath = self.res[x];
-            
-            
+        
         }else{
             
             UIImage* img = [UIImage imageNamed:self.res[x]];
@@ -335,6 +332,7 @@ typedef enum : NSUInteger {
 #pragma mark- 属性的设置方法
 
 -(void)setCurrentPageTintColor:(UIColor *)currentPageTintColor{
+    
     _currentPageTintColor = currentPageTintColor;
     
     self.pageControl.currentPageIndicatorTintColor = currentPageTintColor;

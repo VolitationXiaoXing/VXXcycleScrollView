@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class VXXcycleScrollView;
+//无限轮播器的代理方法
+@protocol VXXcycleScrollViewDelegate <NSObject>
+
+-(void)cycleScrollView:(VXXcycleScrollView*)cycleScrollView didItemClickedAtIndex:(NSInteger)index;
+
+@end
+
 @interface VXXcycleScrollView : UIView
 
 /**
@@ -31,8 +39,12 @@
 
 //没有选中的页面指示器颜色
 @property (strong,nonatomic) UIColor* pageTintColor;
+
 ///选中的页面指示器颜色
 @property (strong,nonatomic) UIColor* currentPageTintColor;
+
+//代理
+@property (weak,nonatomic) id<VXXcycleScrollViewDelegate> delegate;
 
 
 @end

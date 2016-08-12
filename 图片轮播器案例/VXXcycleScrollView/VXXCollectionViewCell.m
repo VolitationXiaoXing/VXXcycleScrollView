@@ -62,8 +62,6 @@ static NSString* const ID = @"cell";
         
     }];
     
-    [self.btnImg setTitle:@"" forState:UIControlStateNormal];
-    
 }
 
 //传过来的是图片
