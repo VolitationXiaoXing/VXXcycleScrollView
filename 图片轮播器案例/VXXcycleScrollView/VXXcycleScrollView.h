@@ -46,5 +46,8 @@
 //代理
 @property (weak,nonatomic) id<VXXcycleScrollViewDelegate> delegate;
 
+//占位图片
+@property (strong,nonatomic) UIImage* cellPlaceholderImage;
+
 
 @end

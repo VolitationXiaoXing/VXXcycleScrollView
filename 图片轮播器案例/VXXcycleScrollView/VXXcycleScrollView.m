@@ -236,6 +236,13 @@ typedef enum : NSUInteger {
     
     VXXCollectionViewCell* cell = [VXXCollectionViewCell collectionViewCellWithCollectionView:self.collectionView andIndexPath:indexPath];
     
+    if (self.cellPlaceholderImage) {
+        
+        cell.cellPlaceholderImage = self.cellPlaceholderImage;
+        
+    }
+    
+    
     cell.onBtnClicked = ^{
         
         [self onBtnClicked];

@@ -55,14 +55,31 @@ static NSString* const ID = @"cell";
     
     NSURL* url = [NSURL URLWithString:imgpath];
     
+    if (self.cellPlaceholderImage) {
+        
+        [self.btnImg sd_setImageWithURL:url forState:UIControlStateNormal placeholderImage:self.cellPlaceholderImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            
+            [self setImg:image];
+            
+            cacheType = SDImageCacheTypeDisk;
+            
+        }];
+
+        
+    }else{
     
-    [self.btnImg sd_setImageWithURL:url forState:UIControlStateNormal completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
-        [self setImg:image];
-        
-        cacheType = SDImageCacheTypeDisk;
-        
-    }];
+        [self.btnImg sd_setImageWithURL:url forState:UIControlStateNormal completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            
+            [self setImg:image];
+            
+            cacheType = SDImageCacheTypeDisk;
+            
+        }];
+    
+    }
+    
+
     
 }
 

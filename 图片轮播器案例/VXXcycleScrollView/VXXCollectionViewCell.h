@@ -15,6 +15,8 @@
 
 @property (copy,nonatomic) NSString* imgpath;
 
+@property (strong,nonatomic) UIImage* cellPlaceholderImage;
+
 +(instancetype)collectionViewCellWithCollectionView:(VXXCollectionView*)collectionView andIndexPath:(NSIndexPath*)indexPath;
 
 @property (copy,nonatomic) void(^onBtnClicked)();
